@@ -959,6 +959,11 @@ a {
   .footer {
     font-size: 1.5rem;
   }
+
+  .footer .list li {
+    margin-bottom: 1rem;
+  }
+
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }

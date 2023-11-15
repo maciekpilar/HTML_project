@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Metatags -->
     <meta name="keywords" content="HTML, CSS" />
     <meta name="description" content="Some App to show HTML and CSS skills" />
+    <meta property="og:title" content="HTML, CSS Document" />
+    <meta
+      property="og:description"
+      content="HTML, CSS Document to showsome skills and fill the Portfolio"
+    />
+    <meta property="og:type" content="Website" />
+    <!-- <meta property="og:image" content="http://link-to-photo" /> -->
+    <!-- <meta property="og:url" content="http://link-to-webpage" /> -->
+    <!-- More on ogp.me -->
+
     <title>HTML and CSS Document</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -175,7 +186,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture data-aos="zoom-in-left">
+        <picture data-aos="zoom-in">
           <source
             type="image/webp"
             srcset="images/easy.webp 1x, images/easy@2x.webp 2x"
@@ -188,7 +199,7 @@
         </picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content" data-aos="fade-left">
+        <div class="feature__content">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#computer"></use>
@@ -201,7 +212,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture data-aos="zoom-in-right">
+        <picture>
           <source
             type="image/webp"
             srcset="images/fast.webp 1x, images/fast@2x.webp 2x"
@@ -214,7 +225,7 @@
         </picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content" data-aos="fade-right">
+        <div class="feature__content">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#wordpress"></use>
@@ -227,7 +238,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture data-aos="zoom-in-left">
+        <picture>
           <source
             type="image/webp"
             srcset="images/wordpress.webp 1x, images/wordpress@2x.webp 2x"
@@ -240,7 +251,7 @@
         </picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content" data-aos="fade-left">
+        <div class="feature__content">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#clock"></use>
@@ -253,7 +264,7 @@
           </p>
           <a href="#" class="link-arrow">Learn More</a>
         </div>
-        <picture data-aos="zoom-in-right">
+        <picture>
           <source
             type="image/webp"
             srcset="images/support.webp 1x, images/support@2x.webp 2x"
@@ -387,16 +398,32 @@
         </div>
       </div>
     </section>
+    <!-- Callout Block -->
+    <div class="container" data-aos="fade-up">
+      <div class="callout callout--primary callout-signup">
+        <div class="grid grid--1x2">
+          <div class="callout__content">
+            <h2 class="callout__heading">Ready to Get Started?</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+              voluptate tempora qui distinctio consequatur aliquid pariatur
+              cupiditate quas cum fugit.
+            </p>
+          </div>
+          <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="block block--dark footer">
       <div class="grid container footer__sections">
         <section class="collapsible collapsible--expanded footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">Products</h2>
             <svg class="icon icon--white collapsible__chevron">
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">Website Hosting</a></li>
@@ -406,12 +433,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">Company</h2>
             <svg class="icon icon--white collapsible__chevron">
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">About</a></li>
@@ -421,12 +448,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">Support</h2>
             <svg class="icon icon--white collapsible__chevron">
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">Contact</a></li>
@@ -436,12 +463,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">Domains</h2>
             <svg class="icon icon--white collapsible__chevron">
               <use xlink:href="images/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">Domain Checker</a></li>
@@ -450,10 +477,10 @@
             </ul>
           </div>
         </section>
-        <section class="footer__brand">
+        <div class="footer__brand">
           <a href="/" class="nav__logo">Logo</a>
           <p class="footer__copyright">Copyright 2023 Maciej Pilarski</p>
-        </section>
+        </div>
       </div>
     </footer>
 
