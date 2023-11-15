@@ -7,7 +7,7 @@
   --color-primary: #2594ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
-  --color-heading: #1b0760;
+  --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
   --color-border: #ccc;
@@ -24,6 +24,10 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+img {
+  width: 100%;
 }
 
 /* ============================================================ */
@@ -43,7 +47,7 @@ html {
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
   color: var(--color-body);
 }
@@ -51,13 +55,13 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
+  color: var(--color-headings);
   margin-bottom: 1rem;
   line-height: 1.1;
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -65,8 +69,9 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 p {
@@ -176,7 +181,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
-  color: var(--color-heading);
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -199,17 +204,17 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
 }
 
 .icon--white {
   fill: #fff;
-}
-
-.icon--small {
-  width: 30px;
-  height: 30px;
 }
 
 .icon-container {
@@ -238,11 +243,10 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  transition: all 0.15s;
 }
 
 .btn .icon {
@@ -267,7 +271,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
@@ -281,12 +285,12 @@ a {
 
 .btn--outline {
   background: #fff;
-  color: var(--color-heading);
-  border: 2px solid var(--color-heading);
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
 }
 
 .btn--outline:hover {
-  background: var(--color-heading);
+  background: var(--color-headings);
   color: #fff;
 }
 
@@ -306,6 +310,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1444px) {
+  .btn {
+    padding: 2rem 4rem;
+  }
+}
+
 /* ============================================================ */
 /*                            INPUT                             */
 /* ============================================================ */
@@ -313,7 +323,7 @@ a {
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
-  color: var(--color-heading);
+  color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
   padding: 1.5rem 3.5rem;
@@ -333,6 +343,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -357,7 +368,7 @@ a {
 
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 7%;
 }
 
 .card--primary .card__header {
@@ -394,11 +405,11 @@ a {
 }
 
 .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .plan__billing-cycle {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 300;
   opacity: 0.8;
   margin-right: 1rem;
@@ -413,10 +424,6 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
-}
-
-.plan--popular {
-  transform: scale(1.1);
 }
 
 .plan--popular .card__header {
@@ -441,6 +448,10 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
   .plan__name {
     font-size: 1.4rem;
   }
@@ -499,17 +510,17 @@ a {
 }
 
 .quote__author {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   font-style: normal;
+  margin-bottom: 0;
 }
 
 .quote__organization {
-  color: var(--color-heading);
+  color: var(--color-headings);
   opacity: 0.4;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: normal;
-  margin-bottom: 0;
 }
 
 .quote__line {
@@ -540,7 +551,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  /* 1x2 means: One row - Two columns */
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -560,12 +570,14 @@ a {
   padding: 3rem;
 }
 
-.testimonial__image {
-  position: relative;
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 110%;
 }
 
-.testimonial__image > img {
-  width: 100%;
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > .icon-container {
@@ -575,13 +587,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial .quote,
-  .testimonial .quote__author {
-    font-size: 2.4rem;
+  .testimonial__image {
+    margin: 0;
   }
 
   .testimonial .quote {
-    margin-left: 6rem;
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
   }
 }
 
@@ -592,10 +605,6 @@ a {
 .callout {
   padding: 4rem;
   border-radius: 5px;
-}
-
-.callout__content {
-  text-align: center;
 }
 
 .callout--primary {
@@ -612,6 +621,10 @@ a {
 .callout .btn {
   justify-self: center;
   align-self: center;
+}
+
+.callout__content {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -669,8 +682,7 @@ a {
 /* ============================================================ */
 
 .block {
-  --padding-vertical: 6rem;
-
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
 }
 
@@ -696,12 +708,17 @@ a {
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 /* ============================================================ */
@@ -713,14 +730,14 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 1rem;
   align-items: center;
 }
 
 .nav__logo {
-  text-decoration: none;
-  color: #fff;
-  font-size: 5rem;
+  color: #fff !important;
+  font-size: 3rem;
+  margin-left: 3rem;
 }
 
 .nav__list {
@@ -731,6 +748,10 @@ a {
 .nav__item {
   padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
+}
+
+.nav__item:last-of-type {
+  border-bottom: none;
 }
 
 .nav__item > a {
@@ -752,6 +773,11 @@ a {
   opacity: 1;
   box-shadow: 0 0 0 3px #666;
   border-radius: 5px;
+}
+
+.nav__brand {
+  transform: translateY(5px);
+  width: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -783,18 +809,16 @@ a {
   margin: 2rem 0 5rem;
 }
 
-.hero__image {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
-  .hero {
-    padding-top: 0;
-  }
-
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 0;
   }
 }
 
@@ -810,8 +834,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -848,16 +873,12 @@ a {
   margin: 12rem 0;
 }
 
-.feature__heading {
-  margin: 1rem 0;
-}
-
-.feature__image {
-  width: 100%;
-}
-
 .feature:first-of-type {
   margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -869,10 +890,6 @@ a {
 /* ============================================================ */
 /*                       SHOWCASE BLOCK                         */
 /* ============================================================ */
-
-.block-showcase__image > img {
-  width: 100%;
-}
 
 @media screen and (min-width: 768px) {
   .block-showcase .grid {
@@ -895,6 +912,7 @@ a {
 
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer a {
@@ -918,6 +936,8 @@ a {
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 
 .footer__brand {
@@ -926,7 +946,6 @@ a {
 }
 
 .footer__brand img {
-  width: 100%;
   max-width: 230px;
 }
 
@@ -937,6 +956,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
@@ -966,4 +988,9 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Sign-up Callout */
+.callout-signup {
+  transform: translateY(5rem);
 }
