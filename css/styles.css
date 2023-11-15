@@ -2,6 +2,8 @@
 /*                          GLOBALS                             */
 /* ============================================================ */
 
+@import "./normalize.css";
+
 /* Color palette */
 :root {
   --color-primary: #2594ff;
