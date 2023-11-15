@@ -41,4 +41,5 @@ All sections have comments and also are created in independent files into compon
 
 
 Deploy on Netlify free,
+<br>
 Also Thanks to Mosh Hamedani for Ultimate HTML and CSS course series!
